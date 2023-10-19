@@ -25,7 +25,7 @@ export class PolarisChip extends LitElement {
     display: flex;
     }
 
-      .card-container {
+    .card-container {
     background-color: #e3e3e3;
     width: 100%;
     height: 100%;
@@ -38,8 +38,25 @@ export class PolarisChip extends LitElement {
     flex-wrap: wrap;
   }
 
+  .bHover{
+    cursor: pointer;
+    background: #005fa9;
+    margin: none;
+    border: none;
+    height: 90%;
+    width: 100%;
+  }
+  
+
   .cards img{
     max-width:100%;
+    max-height: 100%;
+    display: block;  //This was the key to remove the thin margin at the bottom
+  }
+
+  .cards img:hover{
+    opacity: .7;
+    border: none;
   }
 
   #article-top {
@@ -49,19 +66,30 @@ export class PolarisChip extends LitElement {
     margin-top: 10px;
   }
 
-  #cardTitle {
+  .classTitle {
     color: #005fa9;
-    font-size: 20.8px;
+    font-size: 1.3em;
     font-weight: 400;
     font-family: 'roboto', sans-serif;
     text-rendering: optimizeSpeed;
     text-transform: capitalize;
     display: inline;
     box-sizing: border-box;
-    line-height: 20.8px;
+    line-height: 1em;
     text-decoration-skip-ink: auto;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
+    text-decoration: none;
+  }
+
+  .classTitle:visited{
+    color: #005fa9;
+  }
+
+  .classTitle:hover,
+  .classTitle:active,
+  .classTitle:focus{
+    color: #1E407C;
   }
 
   .post-date {
@@ -132,6 +160,8 @@ export class PolarisChip extends LitElement {
     text-rendering: optimizeSpeed;
   }
 
+
+
     `;
   }
   
@@ -144,7 +174,10 @@ export class PolarisChip extends LitElement {
 <div class="cards">
   <div class="card-container">
     <div class="card-content">
+
+    <div class="bHover">
       <img src="https://hr.psu.edu/sites/hr/files/styles/article_home_page/public/2023-10/FluVaccines_HRFeature.jpg?h=09bc788e&itok=KEMIew2T">
+      </div>
 
     
   <div class="article-top">
@@ -154,8 +187,8 @@ export class PolarisChip extends LitElement {
 		</div>
 
       <h3>
-      <a style="text-decoration:none" href=https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies><span id="cardTitle" 
-      class="field field--name-title field--type-string field--label-hidden">University reminds employees of flu, COVID-19 vaccines, resources and policies </span> </a>
+      <a href= "https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies" class= "classTitle"> 
+        University reminds employees of flu, COVID-19 vaccines, resources and policies  </a>
       </h3>
 
      <span property="schema:name" content="University reminds employees of flu, COVID-19 vaccines, resources and policies " class="rdf-meta hidden"></span>
