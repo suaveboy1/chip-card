@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
+
 export class PolarisChip extends LitElement {
   static get properties() {
     return {
@@ -160,8 +161,6 @@ export class PolarisChip extends LitElement {
     text-rendering: optimizeSpeed;
   }
 
-
-
     `;
   }
   
@@ -170,47 +169,32 @@ export class PolarisChip extends LitElement {
   render() {
     return html`
 
-</div>
+
 <div class="cards">
   <div class="card-container">
     <div class="card-content">
 
-    <div class="bHover">
-      <img src="https://hr.psu.edu/sites/hr/files/styles/article_home_page/public/2023-10/FluVaccines_HRFeature.jpg?h=09bc788e&itok=KEMIew2T">
+      <div class="bHover">
+        <a href="https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies">
+          <img src="https://hr.psu.edu/sites/hr/files/styles/article_home_page/public/2023-10/FluVaccines_HRFeature.jpg?h=09bc788e&itok=KEMIew2T"></a>
       </div>
 
-    
-  <div class="article-top">
-    <div class="post-date">
-		  <span class="month">Oct</span>
-			<span class="day">10</span>
-		</div>
+      <div class="article-top">
+        <div class="post-date">
+          <span class="month">Oct</span>
+          <span class="day">10</span>
+        </div>
 
-      <h3>
-      <a href= "https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies" class= "classTitle"> 
-        University reminds employees of flu, COVID-19 vaccines, resources and policies  </a>
-      </h3>
+        <h3>
+          <a href="https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies" class="classTitle">University reminds employees of flu, COVID-19 vaccines, resources and policies</a>
+        </h3>
 
-     <span property="schema:name" content="University reminds employees of flu, COVID-19 vaccines, resources and policies " class="rdf-meta hidden"></span>
-   </div>
+        <span property="schema:name" content="University reminds employees of flu, COVID-19 vaccines, resources and policies" class="rdf-meta hidden"></span>
 
-   </div>
-  </div>
-</div>
-
-    <!--
-    <div class="article-top">
-      <h1 id = "cardTitle">${this.title} </h1>
-      <a href = "https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies"></a>
-   
-      <div class = "post-date">
-        <span class = month>Oct</span>
-        <span class = day>13</span>
       </div>
     </div>
-    */
-  -->
-   
+  </div>
+</div>
       
 
 
