@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit';
 
 
+
 export class PolarisChip extends LitElement {
   static get properties() {
     return {
@@ -19,24 +20,18 @@ export class PolarisChip extends LitElement {
     .cards {
     margin-top: 10px;
     margin-left: 10px;
-    height: 564.039px;
-    width: 423.328px;
-    justify-content: space-around;
-    flex-direction: column;
     display: flex;
+    max-height: 564px;
+    max-width: 423px;
+
+   
     }
 
     .card-container {
-    background-color: #e3e3e3;
-    width: 100%;
-    height: 100%;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    background-color: white;
+    height: 564px;
+    width: 423px;
+    
   }
 
   .bHover{
@@ -53,11 +48,13 @@ export class PolarisChip extends LitElement {
     max-width:100%;
     max-height: 100%;
     display: block;  //This was the key to remove the thin margin at the bottom
+  
   }
 
   .cards img:hover{
     opacity: .7;
     border: none;
+    
   }
 
   #article-top {
@@ -161,9 +158,58 @@ export class PolarisChip extends LitElement {
     text-rendering: optimizeSpeed;
   }
 
+  .fieldBody {
+    box-sizing: border-box;
+    color: #000000;
+    display: block;
+    font-family: 'roboto', sans-serif;
+    line-height: 24px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+  
+  }
+
+  #textP {
+    box-sizing: border-box;
+    color: #000000;
+    display: block;
+    font-family: 'roboto', sans-serif;
+    line-height: 24px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+  }
+
+  #text {
+    box-sizing: border-box;
+    color: #000000;
+    display: block;
+    font-family: 'roboto', sans-serif;
+    font-size: 19.2px;
+    font-weight: 100;
+    line-height: 26.88px;
+    margin-block-end: 28.8px;
+    margin-block-start: 0;
+    padding-bottom: 28.8px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+  }
+ 
+  
+
     `;
   }
-  
+
 
 
   render() {
@@ -171,12 +217,13 @@ export class PolarisChip extends LitElement {
 
 
 <div class="cards">
+
   <div class="card-container">
     <div class="card-content">
 
       <div class="bHover">
         <a href="https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies">
-          <img src="https://hr.psu.edu/sites/hr/files/styles/article_home_page/public/2023-10/FluVaccines_HRFeature.jpg?h=09bc788e&itok=KEMIew2T"></a>
+          <img src="https://hr.psu.edu/sites/hr/files/styles/article_home_page/public/2023-10/FluVaccines_HRFeature.jpg?h=09bc788e&itok=KEMIew2T" class = "img"></a>
       </div>
 
       <div class="article-top">
@@ -188,8 +235,15 @@ export class PolarisChip extends LitElement {
         <h3>
           <a href="https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies" class="classTitle">University reminds employees of flu, COVID-19 vaccines, resources and policies</a>
         </h3>
-
+      
         <span property="schema:name" content="University reminds employees of flu, COVID-19 vaccines, resources and policies" class="rdf-meta hidden"></span>
+
+        <div class="fieldBody">
+            <div property="textP">
+              <p id="text">Updated information for University employees, as it relates to flu and COVID-19 vaccine resources, health plan coverage and absence policies. </p>
+        </div>
+      
+   </div>
 
       </div>
     </div>
