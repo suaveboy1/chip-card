@@ -7,6 +7,8 @@ export class PolarisChip extends LitElement {
   static get properties() {
     return {
       title: { type: String },
+      date: { type: String },
+     
     };
   }
 
@@ -15,6 +17,7 @@ export class PolarisChip extends LitElement {
   constructor() {
     super();
     this.title = 'University reminds employees of flu, COVID-19 vaccines, resources and policies';
+    this.date ='2021-10-10';
   }
 
 
@@ -23,19 +26,18 @@ export class PolarisChip extends LitElement {
 
     :host{
         display: inline-block;
-        
+        contain: content;
+
         
     }
+ 
 
     .cards {
     margin-top: 10px;
     margin-left: 20px;
     max-height: 564px;
     max-width: 423px;
-    justify-content: center;
   
-
-   
     }
 
     .card-container {
@@ -226,7 +228,6 @@ export class PolarisChip extends LitElement {
   render() {
     return html`
 
-
 <div class="cards">
  
 
@@ -242,7 +243,7 @@ export class PolarisChip extends LitElement {
     
         
         <div class="post-date">
-        <date-chip date="2021-10-10"></date-chip>
+        <date-chip date=${this.date}></date-chip>
           <!--
           <span class="month">Oct</span>
           <span class="day">10</span>        
