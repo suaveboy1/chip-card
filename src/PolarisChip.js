@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import "@ojakanbi/date-chip/src/date-chip.js";
 
 
 
@@ -9,20 +10,30 @@ export class PolarisChip extends LitElement {
     };
   }
 
+  
+
   constructor() {
     super();
     this.title = 'University reminds employees of flu, COVID-19 vaccines, resources and policies';
   }
 
+
   static get styles() {
     return css`
 
+    :host{
+        display: inline-block;
+        
+        
+    }
+
     .cards {
     margin-top: 10px;
-    margin-left: 10px;
-    display: flex;
+    margin-left: 20px;
     max-height: 564px;
     max-width: 423px;
+    justify-content: center;
+  
 
    
     }
@@ -66,7 +77,7 @@ export class PolarisChip extends LitElement {
 
   .classTitle {
     color: #005fa9;
-    font-size: 1.3em;
+    font-size: 20.8px;
     font-weight: 400;
     font-family: 'roboto', sans-serif;
     text-rendering: optimizeSpeed;
@@ -204,8 +215,8 @@ export class PolarisChip extends LitElement {
     text-rendering: optimizeSpeed;
     text-size-adjust: 100%;
   }
- 
-  
+
+
 
     `;
   }
@@ -217,6 +228,7 @@ export class PolarisChip extends LitElement {
 
 
 <div class="cards">
+ 
 
   <div class="card-container">
     <div class="card-content">
@@ -227,9 +239,14 @@ export class PolarisChip extends LitElement {
       </div>
 
       <div class="article-top">
+    
+        
         <div class="post-date">
+        <date-chip date="2021-10-10"></date-chip>
+          <!--
           <span class="month">Oct</span>
-          <span class="day">10</span>
+          <span class="day">10</span>        
+  -->
         </div>
 
         <h3>
