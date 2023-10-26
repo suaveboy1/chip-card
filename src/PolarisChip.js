@@ -20,7 +20,7 @@ export class PolarisChip extends LitElement {
     super();
     this.title = 'University reminds employees of flu, COVID-19 vaccines, resources and policies';
     this.image = "https://hr.psu.edu/sites/hr/files/styles/article_home_page/public/2023-10/FluVaccines_HRFeature.jpg?h=09bc788e&itok=KEMIew2T";
-    this.date = "2021-10-10";
+    this.date = "2021-10-11";
     this.description = 'Updated information for University employees, as it relates to flu and COVID-19 vaccine resources, health plan coverage and absence policies.';
     this.web = "https://hr.psu.edu/news/university-reminds-employees-flu-covid-19-vaccines-resources-and-policies";
   }
@@ -35,6 +35,8 @@ export class PolarisChip extends LitElement {
 
         
     }
+
+
  
 
     .cards {
@@ -42,13 +44,14 @@ export class PolarisChip extends LitElement {
     margin-left: 20px;
     max-height: 564px;
     max-width: 423px;
+    justify-content: center;
   
     }
 
     .card-container {
     background-color: white;
-    height: 564px;
-    width: 423px;
+    max-height: 564px;
+    max-width: 423px;
   
     
   }
@@ -66,6 +69,7 @@ export class PolarisChip extends LitElement {
   .cards img{
     max-width:100%;
     max-height: 100%;
+    height: 150%;
     display: block;  //This was the key to remove the thin margin at the bottom
   
   }
@@ -81,7 +85,6 @@ export class PolarisChip extends LitElement {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
-    margin-bottom: 10px;
   }
 
   .classTitle {
@@ -91,7 +94,7 @@ export class PolarisChip extends LitElement {
     font-family: 'roboto', sans-serif;
     text-rendering: optimizeSpeed;
     text-transform: capitalize;
-    display: inline;
+    display: flex;
     box-sizing: border-box;
     line-height: 1em;
     text-decoration-skip-ink: auto;
@@ -190,6 +193,7 @@ export class PolarisChip extends LitElement {
     padding-right: 5px;
     text-rendering: optimizeSpeed;
     text-size-adjust: 100%;
+    margin-top: auto;
   
   }
 
@@ -223,20 +227,38 @@ export class PolarisChip extends LitElement {
     padding-right: 0px;
     text-rendering: optimizeSpeed;
     text-size-adjust: 100%;
-    margin-top: 10px;
   }
 
-  @media (max-width: 800px){
-    .cards{
-      width: 100%;
+  .overlay {
+    box-sizing: border-box;
+    width:100%;
+    height: 100px;
+    overflow: hidden;
+    margin-bottom:none;
+  }
+
+
+
+  @media (max-width: 700px){
+    .cards {
+    margin-top: 0;
+    margin-left: 0;
+    max-height: 564px;
+    max-width: 700px;
+  
     }
+
+    .card-container {
+    background-color: white;
+    max-height: 564px;
+    max-width: 700px;
+  
+    
   }
-
-
-
-
+  }
     `;
   }
+
 
 
 
@@ -254,25 +276,30 @@ export class PolarisChip extends LitElement {
           <img src="${this.image}" class ="img"></a>
       </div> 
 
-      <div class="article-top">
-        <div class="post-date">
+<div class="overlay">
+    <div class="article-top">
+      <div class="post-date">
         <date-chip date=${this.date}></date-chip>
-        </div>
+      </div>
 
         <h3>
           <a href=${this.web} class="classTitle">${this.title}</a>
         </h3>
+    </div>
+ </div>
+
+ <div class="overlay1">
         <div class="fieldBody">
             <div property="textP">
               <p id="text">${this.description}</p>
+             </div>
         </div>
-      
    </div>
 
       </div>
     </div>
   </div>
-</div>
+
       
 
 
